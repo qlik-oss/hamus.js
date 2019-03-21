@@ -1,10 +1,12 @@
 import React, { useMemo, useRef } from 'react';
 import enigma from 'enigma.js';
 import schema from 'enigma.js/schemas/12.170.2.json';
+import picasso from 'picasso.js';
+import picassoQ from 'picasso-plugin-q';
 import usePromise from 'react-use-promise';
-import useModel from '../src/hooks/useModel';
-import useLayout from '../src/hooks/useLayout';
-import usePicasso from '../src/hooks/usePicasso';
+import useModel from '../src/use-model';
+import useLayout from '../src/use-layout';
+import usePicasso from '../src/use-picasso';
 
 const props = {
   qInfo: {
@@ -105,14 +107,25 @@ function useSessionApp(global) {
   return sessionApp;
 }
 
+// we need to register the q plugin in order for picasso to understand the QIX hypercube.
+picasso.use(picassoQ);
+
 export default function App() {
+  // we need to keep track of an element reference for the picasso chart.
   const element = useRef(null);
+  // we need to use the useMemo hook to avoid creating new enigma.js sessions each time.
   const session = useMemo(() => enigma.create({ schema, url: 'ws://localhost:9076/app' }), [false]);
+  // open the session.
   const [global] = useGlobal(session);
+  // create session app, set load script and reload.
   const app = useSessionApp(global);
+  // fetch the model
   const [model, modelError] = useModel(app, props);
+  // fetch the layout
   const [layout, layoutError] = useLayout(model);
+  // render picasso chart
   usePicasso(element, settings, layout);
+
   let msg = '';
   if (!app) {
     msg = 'Fetching app...';

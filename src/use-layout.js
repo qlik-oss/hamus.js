@@ -8,13 +8,8 @@ export default function useLayout(model) {
   let error = null;
 
   [layout, error] = usePromise(() => {
-    if (model) {
-      const newLayout = model.getAppLayout ? model.getAppLayout() : model.getLayout();
-      if (!canceled) {
-        return newLayout;
-      }
-    }
-    return null;
+    if (!model || canceled) return null;
+    return model.getAppLayout ? model.getAppLayout() : model.getLayout();
   }, [model, changed]);
 
   useEffect(() => {

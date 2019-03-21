@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-import picassoQ from 'picasso-plugin-q';
 import picasso from 'picasso.js';
-
-picasso.use(picassoQ);
 
 export default function usePicasso(element, settings, layout) {
   const [chart, setPicasso] = useState(null);

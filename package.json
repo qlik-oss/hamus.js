@@ -1,7 +1,7 @@
 {
   "name": "hamus.js",
   "version": "0.0.1",
-  "description": "Collections of React Hooks for use with QLIK APIs",
+  "description": "Collections of React Hooks for use with Qlik APIs",
   "author": "QlikTech International AB",
   "license": "MIT",
   "repository": {
@@ -16,12 +16,14 @@
     "test:unit": "jest test/unit",
     "test:e2e": "jest test/e2e"
   },
+  "dependencies": {
+    "react-use-promise": "0.1.2"
+  },
   "peerDependencies": {
     "picasso.js": "0.20.0",
     "picasso-plugin-q": "0.20.0",
     "react": "16.8.4",
     "react-dom": "16.8.4",
-    "react-use-promise": "0.1.2",
     "enigma.js": "2.4.0"
   },
   "devDependencies": {
@@ -39,15 +41,14 @@
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
-    "jest": "24.1.0",
+    "jest": "24.5.0",
     "react-hooks-testing-library": "0.3.6",
     "puppeteer": "1.13.0",
     "parcel-bundler": "1.12.0",
     "picasso.js": "0.20.0",
     "picasso-plugin-q": "0.20.0",
     "react": "16.8.4",
-    "react-dom": "16.8.4",
-    "react-use-promise": "0.1.2"
+    "react-dom": "16.8.4"
   },
   "jest": {
     "collectCoverage": true,

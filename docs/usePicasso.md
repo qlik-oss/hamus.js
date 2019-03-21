@@ -6,11 +6,20 @@ For picasso.js docs, head over to [picassojs.com](https://picassojs.com/).
 
 In addition to React 16.8.1 or later, [picasso.js](https://www.npmjs.com/package/picasso.js) and [picasso-plugin-q](https://www.npmjs.com/package/picasso-plugin-q) must be installed to use this hook.
 
+The q plugin must be registered on the picasso global scope, in order for picasso to understand the QIX hypercube.
+```
+picasso.use(picassoQ);
+```
+
 ## Usage
 
 ```jsx
 import { useRef } from 'react';
-import { usePicasso } from 'hamus.js';
+import usePicasso from 'hamus.js';
+import picasso from 'picasso.js';
+import picassoQ from 'picasso-plugin-q';
+
+picasso.use(picassoQ);
 
 const Demo = (settings, layout) => {
   const element = useRef(null);

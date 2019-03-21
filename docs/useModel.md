@@ -3,12 +3,10 @@
 Creates a session object from a definition. The created object is saved in a cache to prevent multiple calls with the same app and definition.
 [CreateSessionObject](https://core.qlik.com/services/qix-engine/apis/qix/doc/#createsessionobject) is the QIX API method called.
 
-In addition to React 16.8.1 or later, [react-use-promise](https://www.npmjs.com/package/react-use-promise) must be installed to use this hook.
-
 ## Usage
 
 ```jsx
-import { useModel } from 'hamus.js';
+import useModel from 'hamus.js';
 
 const Demo = (app, definition) => {
   const [model, modelError] = useModel(app, definition);
@@ -31,6 +29,8 @@ const Demo = (app, definition) => {
 
 ## Reference
 
-Input parameters are [`app`](https://core.qlik.com/services/qix-engine/apis/qix/doc/) and [`definition`](https://core.qlik.com/services/qix-engine/apis/qix/definitions/#genericobjectproperties).
+Input parameters are 
+- [`app`](https://core.qlik.com/services/qix-engine/apis/qix/doc/), fetched using [enigma.js](https://github.com/qlik-oss/enigma.js).
+- [`definition`](https://core.qlik.com/services/qix-engine/apis/qix/definitions/#genericobjectproperties). 
 
 Returns the created [model](https://core.qlik.com/services/qix-engine/apis/qix/definitions/#objectinterface). 

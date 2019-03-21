@@ -1,6 +1,6 @@
 import { renderHook, act } from 'react-hooks-testing-library';
-import { useModel } from '../../src/index';
-import TestPromise from './testPromise';
+import useModel from '../../src/use-model';
+import TestPromise from './test-promise';
 
 describe('useModel hook test', () => {
   let app;

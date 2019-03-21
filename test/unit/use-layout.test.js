@@ -1,6 +1,6 @@
 import { renderHook, act } from 'react-hooks-testing-library';
-import { useLayout } from '../../src/index';
-import TestPromise from './testPromise';
+import useLayout from '../../src/use-layout';
+import TestPromise from './test-promise';
 
 describe('useLayout', () => {
   let promise;
