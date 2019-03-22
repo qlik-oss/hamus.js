@@ -1,6 +1,6 @@
 import { renderHook } from 'react-hooks-testing-library';
 import picasso from 'picasso.js';
-import usePicasso from '../../src/use-picasso';
+import { usePicasso } from '../../src/index';
 
 const mockChart = {
   id: 'myPicassoChart',

@@ -53,9 +53,9 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageOnlyFrom": {
-      "src/hooks/useLayout.js": true,
-      "src/hooks/useModel.js": true,
-      "src/hooks/usePicasso.js": true
+      "src/useLayout.js": true,
+      "src/useModel.js": true,
+      "src/usePicasso.js": true
     }
   }
 }

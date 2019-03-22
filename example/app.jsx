@@ -4,9 +4,7 @@ import schema from 'enigma.js/schemas/12.170.2.json';
 import picasso from 'picasso.js';
 import picassoQ from 'picasso-plugin-q';
 import usePromise from 'react-use-promise';
-import useModel from '../src/use-model';
-import useLayout from '../src/use-layout';
-import usePicasso from '../src/use-picasso';
+import { useModel, useLayout, usePicasso } from '../src/index';
 
 const props = {
   qInfo: {

@@ -15,7 +15,7 @@ picasso.use(picassoQ);
 
 ```jsx
 import { useRef } from 'react';
-import usePicasso from 'hamus.js';
+import { usePicasso } from 'hamus.js';
 import picasso from 'picasso.js';
 import picassoQ from 'picasso-plugin-q';
 

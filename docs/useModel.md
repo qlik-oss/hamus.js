@@ -6,7 +6,7 @@ Creates a session object from a definition. The created object is saved in a cac
 ## Usage
 
 ```jsx
-import useModel from 'hamus.js';
+import { useModel } from 'hamus.js';
 
 const Demo = (app, definition) => {
   const [model, modelError] = useModel(app, definition);

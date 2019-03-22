@@ -6,7 +6,7 @@ Calls either the QIX API method [getAppLayout](https://core.qlik.com/services/qi
 ## Usage
 
 ```jsx
-import useLayout from 'hamus.js';
+import { useLayout } from 'hamus.js';
 
 const Demo = (model) => {
 

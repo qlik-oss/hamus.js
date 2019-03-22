@@ -1,5 +1,5 @@
 import { renderHook, act } from 'react-hooks-testing-library';
-import useLayout from '../../src/use-layout';
+import { useLayout } from '../../src/index';
 import TestPromise from './test-promise';
 
 describe('useLayout', () => {
