@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import enigma from 'enigma.js';
 import schema from 'enigma.js/schemas/12.170.2.json';
 import picasso from 'picasso.js';
@@ -85,6 +85,20 @@ const settings = {
           strokeWidth: 1,
         },
       },
+      brush: {
+        trigger: [{
+          on: 'tap',
+          contexts: ['highlight'],
+        }],
+        consume: [{
+          context: 'highlight',
+          style: {
+            inactive: {
+              opacity: 0.3,
+            },
+          },
+        }],
+      },
     }],
 };
 
@@ -119,10 +133,19 @@ export default function App() {
   const app = useSessionApp(global);
   // fetch the model
   const [model, modelError] = useModel(app, props);
-  // fetch the layout
+  // fetch the layout.
   const [layout, layoutError] = useLayout(model);
-  // render picasso chart
-  usePicasso(element, settings, layout);
+  // render picasso chart.
+  const pic = usePicasso(element, settings, layout);
+
+  // we want to start with one value highlighted in the chart.
+  useEffect(() => {
+    if (!pic) return;
+    // access the brush instance
+    const highlighter = pic.brush('highlight');
+    // highlight a value
+    highlighter.addValue('qHyperCube/qDimensionInfo/0', 1);
+  }, [pic]);
 
   let msg = '';
   if (!app) {
