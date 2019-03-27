@@ -1,0 +1,23 @@
+{
+  "env": {
+    "browser": true
+  },
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "react/forbid-prop-types": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-autofocus": 0,
+    "import/no-named-as-default": 0,
+    "max-len": 0
+  },
+  "overrides": [
+    {
+      "files": ["**/test/**/*.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
