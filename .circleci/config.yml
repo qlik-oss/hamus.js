@@ -28,10 +28,11 @@ jobs:
           command:
             npm run test:unit
 
-      # - run:
-      #     name: E2E tests
-      #     command: 
-      #       npm run test:e2e
+      - run:
+          name: E2E tests
+          command: |
+            npm run start
+            npm run test:e2e
 
       - save_cache:
           paths:

@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/qlik-oss/hamus.js/tree/master.svg?style=svg)](https://circleci.com/gh/qlik-oss/hamus.js/tree/master)
 # hamus.js
 
 hamus.js is a collection of React hooks for sharing reusable functionality used when
