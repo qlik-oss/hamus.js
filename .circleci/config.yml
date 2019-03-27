@@ -7,6 +7,8 @@ jobs:
         command: -S AcceptEULA=yes
       - image: browserless/chrome:1.3-puppeteer-1.10.0
 
+    working_directory: ~/hamus
+
     steps:
       - checkout
 
@@ -31,7 +33,7 @@ jobs:
       - run:
           name: E2E tests
           command: |
-            npm run example
+            npm run example:cov
             npm run test:e2e
 
       - save_cache:

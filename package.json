@@ -11,6 +11,7 @@
   "source": "src/index.js",
   "scripts": {
     "example": "parcel ./example/index.html",
+    "example:cov": "cross-env NODE_ENV=test parcel ./example/index.html",
     "lint": "eslint src example --ext .js*",
     "lint:fix": "eslint src example --ext .js* --fix",
     "test:unit": "jest test/unit",
