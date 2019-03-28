@@ -8,7 +8,6 @@
     "type": "git",
     "url": "https://github.com/qlik-oss/hamus.js"
   },
-  "source": "src/index.js",
   "scripts": {
     "example": "parcel ./example/index.html",
     "lint": "eslint src example --ext .js*",
@@ -16,6 +15,10 @@
     "test:unit": "jest test/unit",
     "test:e2e": "jest test/e2e"
   },
+  "files": [
+    "src/"
+  ],
+  "main": "src/index.js",
   "dependencies": {
     "react-use-promise": "0.1.2"
   },
