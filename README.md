@@ -8,6 +8,8 @@ dealing with Qlik Associative Engine projects.
 You need to have React 16.8.1 or later installed to use React Hooks API. Some of the hooks requires other packages as well,
 see each hook individually below.
 
+This module uses ES6 import syntax, which means that you need Babel to transpile the code.
+
 You can import each hook individually, e.g `import { useModel } from 'hamus.js'`.
 
 - [`useModel`](./docs/useModel.md) &mdash; creates a session object from a definition.
