@@ -1,6 +1,6 @@
 {
   "name": "hamus.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Collections of React Hooks for use with Qlik APIs",
   "author": "QlikTech International AB",
   "license": "MIT",
