@@ -31,8 +31,7 @@ jobs:
 
       - run:
           name: E2E tests
-          command: |
-            npm run example:cov &
+          command:
             npm run test:e2e
 
       - save_cache:
