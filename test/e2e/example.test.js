@@ -3,6 +3,10 @@ import puppeteer from 'puppeteer';
 let browser;
 let page;
 
+beforeAll(() => {
+  jest.setTimeout(50000);
+});
+
 describe('e2e for example app', () => {
   beforeAll(async () => {
     try {
