@@ -16,11 +16,13 @@ describe('e2e for example app', () => {
   });
 
   test('data is fetched and chart is rendered', async () => {
-    const html = await page.$eval('.chart', e => e.innerHTML);
+    let html = await page.$eval('.chart', e => e.innerHTML);
     expect(html).toContain('Fetching app');
     // check if chart has been rendered
     await page.waitFor(2000);
     const bar = await page.$('[data-label="Django Unchained"]');
+    html = await page.$eval('.chart', e => e.innerHTML);
+    console.log(html);
     expect(bar).not.toBeNull();
   });
 });
