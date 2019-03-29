@@ -126,7 +126,7 @@ export default function App() {
   // we need to keep track of an element reference for the picasso chart.
   const element = useRef(null);
   // we need to use the useMemo hook to avoid creating new enigma.js sessions each time.
-  const session = useMemo(() => enigma.create({ schema, url: 'ws://localhost:9076/app' }), [false]);
+  const session = useMemo(() => enigma.create({ schema, url: 'ws://host.docker.internal:9076/app' }), [false]);
   // open the session.
   const [global] = useGlobal(session);
   // create session app, set load script and reload.
