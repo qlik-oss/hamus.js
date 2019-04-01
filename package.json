@@ -55,7 +55,8 @@
     "picasso-plugin-q": "0.20.0",
     "react": "16.8.4",
     "react-dom": "16.8.4",
-    "jest-puppeteer": "4.1.0"
+    "jest-puppeteer": "4.1.0",
+    "coveralls": "3.0.3"
   },
   "jest": {
     "collectCoverage": true,
