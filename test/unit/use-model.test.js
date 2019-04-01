@@ -30,7 +30,7 @@ describe('useModel hook test', () => {
     act(() => promise.resolve(mockModel));
     const [model, error] = result.current;
     expect(model).toBe(mockModel);
-    expect(error).toBeNull();
+    expect(error).toBeUndefined();
   });
 
   test('error upon object creation should be returned', async () => {
@@ -38,22 +38,22 @@ describe('useModel hook test', () => {
     const e = new Error('Error occurred');
     act(() => promise.reject(e));
     const [model, error] = result.current;
-    expect(model).toBeNull();
+    expect(model).toBeUndefined();
     expect(error).toEqual(e);
   });
 
-  test('should return null when no app is present', () => {
+  test('should return undefined when no app is present', () => {
     const { result } = renderHook(() => useModel(null));
     const [model, error] = result.current;
-    expect(model).toBeNull();
-    expect(error).toBeNull();
+    expect(model).toBeUndefined();
+    expect(error).toBeUndefined();
   });
 
-  test('pending promise returns null model', async () => {
+  test('pending promise returns undefined model', async () => {
     const { result } = renderHook(() => useModel(app, def));
     const [model, error] = result.current;
-    expect(model).toBeNull();
-    expect(error).toBeNull();
+    expect(model).toBeUndefined();
+    expect(error).toBeUndefined();
   });
 
   test('object should be created from def', async () => {

@@ -20,18 +20,18 @@ describe('useLayout', () => {
     };
   });
 
-  test('should return null when no model is present', () => {
+  test('should return undefined when no model is present', () => {
     const { result } = renderHook(() => useLayout(null));
     const [layout, error] = result.current;
-    expect(layout).toBeNull();
-    expect(error).toBeNull();
+    expect(layout).toBeUndefined();
+    expect(error).toBeUndefined();
   });
 
-  test('should return null on pending promise', () => {
+  test('should return undefined on pending promise', () => {
     const { result } = renderHook(() => useLayout(model));
     const [layout, error] = result.current;
-    expect(layout).toBeNull();
-    expect(error).toBeNull();
+    expect(layout).toBeUndefined();
+    expect(error).toBeUndefined();
   });
 
   test('should throw error on rejected promise', () => {
@@ -39,7 +39,7 @@ describe('useLayout', () => {
     const rejectedError = 'Error occurred';
     act(() => promise.reject(rejectedError));
     const [layout, error] = result.current;
-    expect(layout).toBeNull();
+    expect(layout).toBeUndefined();
     expect(error).toEqual(rejectedError);
   });
 
@@ -48,7 +48,7 @@ describe('useLayout', () => {
     act(() => promise.resolve(mockLayout));
     const [layout, error] = result.current;
     expect(layout).toEqual(mockLayout);
-    expect(error).toBeNull();
+    expect(error).toBeUndefined();
   });
 
   test('should add listener for model changes', () => {
@@ -89,7 +89,7 @@ describe('useLayout', () => {
     const [layout, error] = result.current;
     expect(model.getAppLayout).toBeCalledTimes(1);
     expect(layout).toEqual(mockLayout);
-    expect(error).toBeNull();
+    expect(error).toBeUndefined();
   });
 
   test('layout should not be updated if component has been unmounted when promise resolves', () => {
@@ -97,7 +97,7 @@ describe('useLayout', () => {
     unmount();
     act(() => promise.resolve(mockLayout));
     const [layout, error] = result.current;
-    expect(layout).toBeNull();
-    expect(error).toBeNull();
+    expect(layout).toBeUndefined();
+    expect(error).toBeUndefined();
   });
 });
