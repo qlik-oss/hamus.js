@@ -19,10 +19,9 @@ describe('e2e for example app', () => {
     let html = await page.$eval('.chart', e => e.innerHTML);
     expect(html).toContain('Fetching app');
     // check if chart has been rendered
-    await page.waitFor(2000);
+    await page.waitFor(5000);
     const bar = await page.$('[data-label="Django Unchained"]');
     html = await page.$eval('.chart', e => e.innerHTML);
-    console.log(html);
     expect(bar).not.toBeNull();
   });
 });

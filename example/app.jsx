@@ -5,6 +5,7 @@ import picasso from 'picasso.js';
 import picassoQ from 'picasso-plugin-q';
 import usePromise from 'react-use-promise';
 import { useModel, useLayout, usePicasso } from '../src/index';
+import script from './data';
 
 const props = {
   qInfo: {
@@ -108,10 +109,6 @@ function useSessionApp(global) {
   const [sessionApp] = usePromise(async () => {
     if (!global) return null;
     const app = await global.createSessionApp();
-    await app.createConnection({ qName: 'data', qConnectionString: '/data/', qType: 'folder' });
-    const script = `Tarantino:
-    LOAD * FROM [lib://data/tarantino.csv]
-    (txt, utf8, embedded labels, delimiter is ',');`;
     await app.setScript(script);
     await app.doReload();
     return app;
@@ -126,7 +123,7 @@ export default function App() {
   // we need to keep track of an element reference for the picasso chart.
   const element = useRef(null);
   // we need to use the useMemo hook to avoid creating new enigma.js sessions each time.
-  const session = useMemo(() => enigma.create({ schema, url: 'ws://qix-engine:9076/app' }), [false]);
+  const session = useMemo(() => enigma.create({ schema, url: 'ws://localhost:9076/app' }), [false]);
   // open the session.
   const [global] = useGlobal(session);
   // create session app, set load script and reload.
