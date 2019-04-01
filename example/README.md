@@ -1,0 +1,2 @@
+The data set comes from [https://data.fivethirtyeight.com/](https://data.fivethirtyeight.com/) and is published under the Creative Commons Attribution 4.0 International License.
+The data set has been altered, ugly words have been replaced with something more polite.

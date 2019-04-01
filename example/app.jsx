@@ -5,6 +5,7 @@ import picasso from 'picasso.js';
 import picassoQ from 'picasso-plugin-q';
 import usePromise from 'react-use-promise';
 import { useModel, useLayout, usePicasso } from '../src/index';
+import script from './data';
 
 const props = {
   qInfo: {
@@ -108,10 +109,6 @@ function useSessionApp(global) {
   const [sessionApp] = usePromise(async () => {
     if (!global) return null;
     const app = await global.createSessionApp();
-    await app.createConnection({ qName: 'data', qConnectionString: '/data/', qType: 'folder' });
-    const script = `Tarantino:
-    LOAD * FROM [lib://data/tarantino.csv]
-    (txt, utf8, embedded labels, delimiter is ',');`;
     await app.setScript(script);
     await app.doReload();
     return app;
