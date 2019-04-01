@@ -38,3 +38,6 @@ jobs:
           paths:
             - node_modules
           key: npm-dependency-cache-{{ checksum "package-lock.json" }}
+      
+      - store_artifacts:
+          path: coverage
