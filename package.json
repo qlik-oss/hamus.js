@@ -56,7 +56,9 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "jest-puppeteer": "4.1.1",
-    "coveralls": "3.0.3"
+    "coveralls": "3.0.3",
+    "react-testing-library": "7.0.0",
+    "react-test-renderer": "16.8.6"
   },
   "jest": {
     "collectCoverage": true,
