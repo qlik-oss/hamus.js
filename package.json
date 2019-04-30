@@ -25,19 +25,19 @@
     "react-use-promise": "0.2.0"
   },
   "peerDependencies": {
-    "picasso.js": "0.24.0",
-    "picasso-plugin-q": "0.24.0",
+    "picasso.js": "0.25.1",
+    "picasso-plugin-q": "0.25.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "enigma.js": "2.4.0"
   },
   "devDependencies": {
-    "@babel/core": "7.4.3",
-    "@babel/plugin-proposal-class-properties": "7.4.0",
-    "@babel/plugin-transform-async-to-generator": "7.4.0",
+    "@babel/core": "7.4.4",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/plugin-transform-async-to-generator": "7.4.4",
     "@babel/plugin-transform-react-jsx": "7.3.0",
-    "@babel/plugin-transform-runtime": "7.4.3",
-    "@babel/preset-env": "7.4.3",
+    "@babel/plugin-transform-runtime": "7.4.4",
+    "@babel/preset-env": "7.4.4",
     "@babel/preset-react": "7.0.0",
     "babel-eslint": "10.0.1",
     "cross-env": "5.2.0",
@@ -48,15 +48,17 @@
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
     "jest": "24.7.1",
-    "react-hooks-testing-library": "0.4.1",
+    "react-hooks-testing-library": "0.5.0",
     "puppeteer": "1.14.0",
     "parcel-bundler": "1.12.3",
-    "picasso.js": "0.24.0",
-    "picasso-plugin-q": "0.24.0",
+    "picasso.js": "0.25.1",
+    "picasso-plugin-q": "0.25.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "jest-puppeteer": "4.1.1",
-    "coveralls": "3.0.3"
+    "coveralls": "3.0.3",
+    "react-testing-library": "7.0.0",
+    "react-test-renderer": "16.8.6"
   },
   "jest": {
     "collectCoverage": true,
