@@ -5,18 +5,31 @@
 hamus.js is a collection of React hooks for sharing reusable functionality used when
 dealing with Qlik Associative Engine projects.
 
-# Usage
-
-You need to have React 16.8.1 or later installed to use React Hooks API. Some of the hooks requires other packages as well,
-see each hook individually below.
-
-This module uses ES6 import syntax, which means that you need Babel to transpile the code.
-
-You can import each hook individually, e.g `import { useModel } from 'hamus.js'`.
-
 - [`useModel`](./docs/useModel.md) &mdash; creates a session object from a definition.
 - [`useLayout`](./docs/useLayout.md) &mdash; fetches the layout from a model, and updates the layout on model changes.
 - [`usePicasso`](./docs/usePicasso.md) &mdash; renders a [picasso.js](https://github.com/qlik-oss/picasso.js) visualization to an element.
+
+# Usage
+
+You need to have React 16.8.1 or later installed to use the React Hooks API. Some of the hooks requires other packages as well,
+see each hook individually above.
+
+This module uses ES6 import syntax, which means that you need Babel to transpile the code.
+
+You can import each hook individually, e.g `import useModel from 'hamus.js/src/use-model'`,
+
+or you can use ES6 named imports, e.g. `import { useModel } from 'hamus.js'`.
+
+When using ES6 named imports you might run into missing dependency errors from hooks that you don't actually use in your project.
+To resolve these errors, you either have to install the dependencies, or you can tranform the named import statements to individual
+import statements with `[babel-plugin-import](https://github.com/ant-design/babel-plugin-import)`. The `.babelrc` file will look something
+like this:
+
+```
+  "plugins": [
+    ["import", { "libraryName": "hamus.js", "libraryDirectory": "src"}] 
+  ]
+  ```
 
 # Example
 
