@@ -1,28 +1,31 @@
 import { useState, useEffect } from 'react';
-import usePromise from 'react-use-promise';
+import debounce from './render-debouncer';
 
 export default function useLayout(model) {
-  const [changed, setChanged] = useState(null);
   let canceled = false;
-  let layout = null;
-  let error = null;
-
-  [layout, error] = usePromise(() => {
-    if (!model || canceled) return null;
-    return model.getAppLayout ? model.getAppLayout() : model.getLayout();
-  }, [model, changed]);
+  const [error, setError] = useState(null);
+  const [layout, setLayout] = useState(null);
 
   useEffect(() => {
-    if (!model) {
-      return undefined;
-    }
-    const modelChanged = () => {
-      setChanged(new Date());
+    if (!model) return undefined;
+    const fetchModel = async () => {
+      try {
+        const newLayout = model.getAppLayout ? await model.getAppLayout() : await model.getLayout();
+        if (!canceled) {
+          debounce(() => {
+            setLayout(newLayout);
+          });
+        }
+      } catch (err) {
+        setError(err);
+      }
     };
-    model.on('changed', modelChanged);
+    model.on('changed', fetchModel);
+    fetchModel();
+
     return () => {
       canceled = true;
-      model.removeListener('changed', modelChanged);
+      model.removeListener('changed', fetchModel);
     };
   }, [model && model.id]);
 
