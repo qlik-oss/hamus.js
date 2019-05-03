@@ -22,7 +22,7 @@ or you can use ES6 named imports, e.g. `import { useModel } from 'hamus.js'`.
 
 When using ES6 named imports you might run into missing dependency errors from hooks that you don't actually use in your project.
 To resolve these errors, you either have to install the dependencies, or you can tranform the named import statements to individual
-import statements with `[babel-plugin-import](https://github.com/ant-design/babel-plugin-import)`. The `.babelrc` file will look sth
+import statements with `[babel-plugin-import](https://github.com/ant-design/babel-plugin-import)`. The `.babelrc` file will look something
 like this:
 
 ```
