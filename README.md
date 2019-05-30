@@ -1,6 +1,7 @@
 [![CircleCI](https://circleci.com/gh/qlik-oss/hamus.js/tree/master.svg?style=svg)](https://circleci.com/gh/qlik-oss/hamus.js/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/qlik-oss/hamus.js/badge.svg?branch=master)](https://coveralls.io/github/qlik-oss/hamus.js?branch=master)
-# hamus.js
+
+<img src="./hamus_js.svg" alt="corectl" width="300"/>
 
 hamus.js is a collection of React hooks for sharing reusable functionality used when
 dealing with Qlik Associative Engine projects.
