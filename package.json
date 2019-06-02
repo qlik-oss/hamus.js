@@ -57,7 +57,7 @@
     "react-dom": "16.9.0-alpha.0",
     "jest-puppeteer": "4.2.0",
     "coveralls": "3.0.3",
-    "react-testing-library": "7.0.1",
+    "react-testing-library": "8.0.1",
     "react-test-renderer": "16.9.0-alpha.0"
   },
   "jest": {
