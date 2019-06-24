@@ -11,8 +11,8 @@
   "scripts": {
     "example": "parcel ./example/index.html",
     "example:cov": "cross-env NODE_ENV=test parcel ./example/index.html",
-    "lint": "eslint src example --ext .js*",
-    "lint:fix": "eslint src example --ext .js* --fix",
+    "lint": "eslint src example --ext .js,.jsx",
+    "lint:fix": "eslint src example --ext .js,.jsx --fix",
     "test:unit": "jest test/unit",
     "test:e2e": "jest -c test/e2e/jest.config.js test/e2e",
     "preversion": "npm run lint && npm run test:unit && npm run test:e2e"
@@ -42,7 +42,7 @@
     "babel-eslint": "10.0.2",
     "cross-env": "5.2.0",
     "enigma.js": "2.4.0",
-    "eslint": "5.16.0",
+    "eslint": "6.0.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.17.3",
     "eslint-plugin-jsx-a11y": "6.2.1",
