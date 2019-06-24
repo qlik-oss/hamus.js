@@ -11,8 +11,8 @@
   "scripts": {
     "example": "parcel ./example/index.html",
     "example:cov": "cross-env NODE_ENV=test parcel ./example/index.html",
-    "lint": "eslint src example --ext .js*",
-    "lint:fix": "eslint src example --ext .js* --fix",
+    "lint": "eslint src example --ext .js,.jsx",
+    "lint:fix": "eslint src example --ext .js,.jsx --fix",
     "test:unit": "jest test/unit",
     "test:e2e": "jest -c test/e2e/jest.config.js test/e2e",
     "preversion": "npm run lint && npm run test:unit && npm run test:e2e"
