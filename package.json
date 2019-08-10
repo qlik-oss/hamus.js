@@ -53,12 +53,12 @@
     "parcel-bundler": "1.12.3",
     "picasso.js": "0.26.1",
     "picasso-plugin-q": "0.26.1",
-    "react": "16.9.0-alpha.0",
-    "react-dom": "16.9.0-alpha.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
     "jest-puppeteer": "4.3.0",
-    "coveralls": "3.0.5",
+    "coveralls": "3.0.6",
     "react-testing-library": "8.0.1",
-    "react-test-renderer": "16.9.0-alpha.0"
+    "react-test-renderer": "16.9.0"
   },
   "jest": {
     "collectCoverage": true,
