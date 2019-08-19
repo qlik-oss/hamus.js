@@ -45,7 +45,7 @@ const props = {
 const settings = {
   scales: {
     x: {
-      data: { extract: { field: 'qDimensionInfo/0', props: { name: { field: 'qDimensionInfo/0', label: v => v.qText } } } },
+      data: { extract: { field: 'qDimensionInfo/0', props: { name: { field: 'qDimensionInfo/0', label: (v) => v.qText } } } },
       padding: 0.2,
     },
     y: {
@@ -103,7 +103,7 @@ const settings = {
     }],
 };
 
-const useGlobal = session => usePromise(() => session.open(), [session]);
+const useGlobal = (session) => usePromise(() => session.open(), [session]);
 
 function useSessionApp(global) {
   const [sessionApp] = usePromise(async () => {

@@ -5,7 +5,7 @@ let pendingStateMutators = [];
 let startTime = null;
 function fireAllPendingMutators() {
   ReactDOM.unstable_batchedUpdates(() => {
-    pendingStateMutators.forEach(mutator => mutator());
+    pendingStateMutators.forEach((mutator) => mutator());
     pendingStateMutators = [];
   });
 }
