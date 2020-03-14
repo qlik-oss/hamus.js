@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10-browsers
-      - image: qlikcore/engine:12.556.0
+      - image: qlikcore/engine:12.612.0
         command: -S AcceptEULA=yes
 
     working_directory: ~/hamus
