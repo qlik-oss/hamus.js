@@ -22,7 +22,7 @@
   ],
   "main": "src/index.js",
   "dependencies": {
-    "react-use-promise": "0.2.0"
+    "react-use-promise": "0.3.0"
   },
   "peerDependencies": {
     "picasso.js": ">=0.14.0",
