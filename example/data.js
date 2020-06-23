@@ -1,4 +1,3 @@
-
 const script = `Tarantino:
   LOAD * INLINE [
     movie,type,word,minutes_in
