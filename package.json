@@ -49,7 +49,7 @@
     "eslint-plugin-react": "7.20.6",
     "jest": "26.4.2",
     "react-hooks-testing-library": "0.6.0",
-    "puppeteer": "5.2.1",
+    "puppeteer": "5.3.0",
     "parcel-bundler": "1.12.4",
     "picasso.js": "0.34.0",
     "picasso-plugin-q": "0.34.0",
