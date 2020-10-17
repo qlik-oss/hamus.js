@@ -32,13 +32,13 @@
     "enigma.js": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.11.6",
-    "@babel/plugin-proposal-class-properties": "7.10.4",
-    "@babel/plugin-transform-async-to-generator": "7.10.4",
-    "@babel/plugin-transform-react-jsx": "7.10.4",
-    "@babel/plugin-transform-runtime": "7.11.5",
-    "@babel/preset-env": "7.11.5",
-    "@babel/preset-react": "7.10.4",
+    "@babel/core": "7.12.3",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-transform-async-to-generator": "7.12.1",
+    "@babel/plugin-transform-react-jsx": "7.12.1",
+    "@babel/plugin-transform-runtime": "7.12.1",
+    "@babel/preset-env": "7.12.1",
+    "@babel/preset-react": "7.12.1",
     "babel-eslint": "10.1.0",
     "cross-env": "7.0.2",
     "enigma.js": "2.7.2",
@@ -53,12 +53,12 @@
     "parcel-bundler": "1.12.4",
     "picasso.js": "0.34.0",
     "picasso-plugin-q": "0.34.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "jest-puppeteer": "4.4.0",
     "coveralls": "3.1.0",
     "react-testing-library": "8.0.1",
-    "react-test-renderer": "16.13.1"
+    "react-test-renderer": "16.14.0"
   },
   "jest": {
     "collectCoverage": true,
