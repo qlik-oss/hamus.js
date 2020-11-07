@@ -27,8 +27,8 @@
   "peerDependencies": {
     "picasso.js": ">=0.14.0",
     "picasso-plugin-q": ">=0.14.0",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0",
     "enigma.js": "^2.0.0"
   },
   "devDependencies": {
@@ -53,12 +53,12 @@
     "parcel-bundler": "1.12.4",
     "picasso.js": "0.34.0",
     "picasso-plugin-q": "0.34.0",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "jest-puppeteer": "4.4.0",
     "coveralls": "3.1.0",
     "react-testing-library": "8.0.1",
-    "react-test-renderer": "16.14.0"
+    "react-test-renderer": "17.0.1"
   },
   "jest": {
     "collectCoverage": true,
