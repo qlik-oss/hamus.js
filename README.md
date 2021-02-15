@@ -38,5 +38,5 @@ The [example app](./example/) uses the hooks to connect to a Qlik Associative En
 ```bash
 ACCEPT_EULA=yes docker-compose up -d
 npm install
-npm start example
+npm run example
 ```
