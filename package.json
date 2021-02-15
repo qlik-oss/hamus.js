@@ -53,7 +53,7 @@
     "parcel-bundler": "1.12.4",
     "picasso-plugin-q": "0.34.0",
     "picasso.js": "0.34.0",
-    "puppeteer": "7.0.4",
+    "puppeteer": "7.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-hooks-testing-library": "0.6.0",
