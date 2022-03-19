@@ -32,7 +32,7 @@
     "react-dom": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.17.5",
+    "@babel/core": "7.17.8",
     "@babel/plugin-proposal-class-properties": "7.16.7",
     "@babel/plugin-transform-async-to-generator": "7.16.8",
     "@babel/plugin-transform-react-jsx": "7.17.3",
@@ -47,7 +47,7 @@
     "eslint-config-airbnb": "18.2.1",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-react": "7.29.3",
+    "eslint-plugin-react": "7.29.4",
     "jest": "27.5.1",
     "jest-puppeteer": "6.1.0",
     "parcel-bundler": "1.12.5",
