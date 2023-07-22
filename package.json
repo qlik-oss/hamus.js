@@ -28,8 +28,8 @@
     "enigma.js": "^2.0.0",
     "picasso-plugin-q": ">=0.14.0 || 0.37.1",
     "picasso.js": ">=0.14.0 || 0.37.1",
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.22.9",
@@ -54,10 +54,10 @@
     "picasso-plugin-q": "0.37.2",
     "picasso.js": "0.37.2",
     "puppeteer": "13.7.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-hooks-testing-library": "0.6.0",
-    "react-test-renderer": "17.0.2",
+    "react-test-renderer": "18.2.0",
     "react-testing-library": "8.0.1"
   },
   "jest": {
