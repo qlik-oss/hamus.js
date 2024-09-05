@@ -4,7 +4,7 @@
 <img src="./hamus_js.svg" alt="corectl" width="300"/>
 
 hamus.js is a collection of React hooks for sharing reusable functionality used when
-dealing with Qlik Associative Engine projects.
+dealing with Qlik Associative Engine projects. 
 
 - [`useModel`](./docs/useModel.md) &mdash; creates a session object from a definition.
 - [`useLayout`](./docs/useLayout.md) &mdash; fetches the layout from a model, and updates the layout on model changes.
