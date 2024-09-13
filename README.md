@@ -1,3 +1,5 @@
+:warning: This repository is archived and no longer maintained. Please use the code for inspiration.
+
 [![CircleCI](https://circleci.com/gh/qlik-oss/hamus.js/tree/master.svg?style=svg)](https://circleci.com/gh/qlik-oss/hamus.js/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/qlik-oss/hamus.js/badge.svg?branch=master)](https://coveralls.io/github/qlik-oss/hamus.js?branch=master)
 
